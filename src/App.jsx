@@ -31,23 +31,9 @@ const projects = [
     visual: 'cabins'
   },
   {
-    id: 'vuelos',
-    number: '03',
-    name: 'VuelosProgra',
-    kind: 'Backend · API REST',
-    status: 'Proyecto académico',
-    statusType: 'neutral',
-    summary: 'API para administrar información de vuelos mediante operaciones de backend.',
-    description: 'Servicio backend desarrollado con FastAPI para exponer operaciones sobre información de vuelos. La API permite trabajar con recursos mediante endpoints y separar la lógica de acceso a datos de las solicitudes HTTP.',
-    contribution: 'Implementación de endpoints y operaciones CRUD, uso de SQLAlchemy para el trabajo con datos y organización de la lógica de backend. El repositorio también contempla operaciones para deshacer y rehacer cambios.',
-    tech: ['Python', 'FastAPI', 'SQLAlchemy', 'REST API'],
-    repo: 'https://github.com/imeduuu/vuelosprogra',
-    visual: 'api'
-  },
-  {
     id: 'dae',
-    number: '04',
-    name: 'DAE2026',
+    number: '03',
+    name: 'Gestor de Pedidos Tecnológicos',
     kind: 'Aplicación de escritorio · Gestión de pedidos',
     status: 'Proyecto académico',
     statusType: 'neutral',
@@ -72,16 +58,6 @@ function ProjectVisual({ type }) {
     <div className="cabin-nav"><span className="cabin-logo">REFUGIO<span>.</span></span><span>ALOJAMIENTOS　 RESERVAS　 CONTACTO</span></div>
     <div className="cabin-hero"><div><small>DESCANSO EN LA NATURALEZA</small><b>Tu próximo<br/>descanso comienza aquí.</b><span className="fake-button">Explorar cabañas ↗</span></div><div className="cabin-art"><div className="sun"/><div className="mountain m1"/><div className="mountain m2"/><div className="little-house"/></div></div>
     <div className="cabin-foot"><span>01 — BOSQUE</span><span>02 — RÍO</span><span>03 — MONTAÑA</span></div>
-  </div>;
-  if (type === 'api') return <div className="visual visual-api">
-    <div className="terminal-head"><span/><span/><span/> <label>vuelosprogra / API</label></div>
-    <div className="api-code"><p><i>GET</i> <b>/api/vuelos</b></p><p className="muted">// Listar vuelos disponibles</p><p><em>200 OK</em> <span>· application/json</span></p><pre>{`{
-  "id": 1024,
-  "origen": "SCL",
-  "destino": "PMC",
-  "estado": "programado"
-}`}</pre></div>
-    <div className="api-foot"><span>FASTAPI</span><span>SQLALCHEMY</span><span>REST</span></div>
   </div>;
   return <div className="visual visual-dae">
     <div className="dae-sidebar"><div className="dae-mark">DAE<span>.</span></div><i/><i/><i/><i/></div>
