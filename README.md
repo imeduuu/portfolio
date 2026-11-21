@@ -1,46 +1,54 @@
 # Portafolio — Eduardo Domínguez
 
-Portafolio personal desarrollado con React y Vite. Incluye presentación, proyectos con vistas conceptuales desplegables, sección sobre mí y contacto.
+Sitio personal con mis proyectos de desarrollo de software.
 
-## Requisitos
+**En vivo:** https://portfolio-eduardo-dominguez.vercel.app
 
-- Node.js 20 o superior
-- npm
+## Stack
 
-## Ejecutar localmente
+- [React 18](https://react.dev) + [Vite 6](https://vite.dev)
+- CSS propio (sin frameworks), tipografías Manrope y DM Mono
+- Íconos de [lucide-react](https://lucide.dev)
+- ESLint (configuración plana, reglas de React y Hooks) y Prettier
+
+## Estructura
+
+```
+.
+├── index.html              # Metadatos SEO, Open Graph y fuentes
+├── public/                 # Archivos estáticos (favicon, CV, capturas, og-image)
+├── src/
+│   ├── main.jsx            # Punto de entrada
+│   ├── App.jsx             # Composición de secciones
+│   ├── components/         # Header, Hero, Projects, ProjectCard, ProjectVisual,
+│   │                       # About, Stack, Contact, Footer
+│   ├── data/
+│   │   ├── profile.js      # Datos personales, enlaces y orden de secciones
+│   │   ├── projects.js     # Proyectos (con demo, highlights, featured, image)
+│   │   └── stack.js        # Tecnologías agrupadas
+│   └── styles.css          # Estilos, ordenados por sección
+├── eslint.config.js
+└── vite.config.js
+```
+
+Para editar contenido basta con modificar los archivos de `src/data/`. Si un proyecto tiene
+`image`, la tarjeta muestra esa captura; si no, usa la vista conceptual en CSS.
+
+## Desarrollo
+
+Requiere Node.js 20 o superior.
 
 ```bash
 npm install
-npm run dev
+npm run dev       # servidor local en http://localhost:5173
+npm run build     # versión de producción en dist/
+npm run preview   # sirve dist/ localmente
+npm run lint      # ESLint
+npm run format    # Prettier
 ```
 
-Abre la URL local que indique Vite (normalmente http://localhost:5173).
+## Despliegue
 
-## Generar versión de producción
-
-```bash
-npm run build
-npm run preview
-```
-
-El resultado se genera en `dist/`.
-
-## Desplegar en Vercel
-
-1. Sube esta carpeta a un repositorio de GitHub.
-2. En Vercel selecciona **Add New → Project** e importa el repositorio.
-3. Framework Preset: **Vite**.
-4. Build Command: `npm run build`.
-5. Output Directory: `dist`.
-6. No necesitas variables de entorno.
-7. Pulsa **Deploy**.
-
-## Personalización
-
-- Edita los textos y proyectos en `src/App.jsx`.
-- Cambia colores, tipografías y estilos en `src/styles.css`.
-- Los enlaces de GitHub y el correo están en `src/App.jsx`.
-
-## Nota sobre las vistas de proyectos
-
-Las vistas incluidas en las tarjetas son ilustraciones conceptuales hechas en CSS para representar el tipo de aplicación. No son capturas reales de las interfaces originales.
+1. Importar el repositorio en Vercel (**Add New → Project**) con el preset **Vite**.
+2. Build Command: `npm run build` · Output Directory: `dist`.
+3. No requiere variables de entorno.
