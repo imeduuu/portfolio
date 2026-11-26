@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Download, ExternalLink, Github, Mail } from 'lucide-react';
 import { profile, sectionIndex } from '../data/profile.js';
 
 export default function Contact() {
@@ -27,14 +27,6 @@ export default function Contact() {
             <ExternalLink size={13} aria-hidden="true" />
           </a>
         </li>
-        {profile.linkedin && (
-          <li>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
-              <Linkedin size={16} aria-hidden="true" /> LinkedIn{' '}
-              <ExternalLink size={13} aria-hidden="true" />
-            </a>
-          </li>
-        )}
         <li>
           <a href={profile.cv} download>
             <Download size={16} aria-hidden="true" /> CV (PDF)

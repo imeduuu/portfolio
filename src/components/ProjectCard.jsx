@@ -19,8 +19,8 @@ export default function ProjectCard({ project, number, expanded, onToggle }) {
               alt={project.imageAlt}
               loading="lazy"
               decoding="async"
-              width="1280"
-              height="800"
+              width="1440"
+              height="1000"
             />
           ) : (
             <>

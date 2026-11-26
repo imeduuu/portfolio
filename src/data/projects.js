@@ -2,7 +2,7 @@
  * Proyectos mostrados en el portafolio.
  *
  * Campos obligatorios: id, name, kind, status, statusType ('live' | 'progress' | 'neutral'),
- * summary, description, contribution, tech, repo, visual ('cancha' | 'cabins' | 'dae').
+ * summary, description, contribution, tech, repo, visual ('cancha' | 'cabins').
  *
  * Campos opcionales:
  * - demo:       URL pública; muestra el botón «Ver demo».
@@ -14,9 +14,6 @@
  *
  * Las cifras de los highlights se verificaron en los repositorios (noviembre de 2026).
  */
-
-// TODO: agregar capturas reales en public/projects/ (cancha.webp, cabanias.webp, dae.webp,
-// idealmente 1280×800) y completar `image` e `imageAlt` en cada proyecto.
 
 export const projects = [
   {
@@ -38,20 +35,13 @@ export const projects = [
       'Importa ligas y copas de Chile, Argentina, Brasil y Conmebol desde ANFP, ANFA, CBF y ESPN.',
       'La API se despliega en Render solo cuando el CI de GitHub Actions termina en verde.',
     ],
-    tech: [
-      'React',
-      'TypeScript',
-      'NestJS',
-      'GraphQL',
-      'MongoDB',
-      'GitHub Actions',
-      'Docker',
-    ],
+    tech: ['React', 'TypeScript', 'NestJS', 'GraphQL', 'MongoDB', 'GitHub Actions', 'Docker'],
     repo: 'https://github.com/imeduuu/cancha',
     demo: 'https://cancha-eduardo-dominguez.vercel.app',
     visual: 'cancha',
-    image: '/projects/cancha.png',
-    imageAlt: 'Pantalla principal de Cancha con la biblioteca de torneos y el simulador de campeonatos.',
+    image: '/projects/cancha.webp',
+    imageAlt:
+      'Pantalla principal de Cancha con la biblioteca de torneos y el simulador de campeonatos.',
   },
   {
     id: 'cabanias',
@@ -68,22 +58,5 @@ export const projects = [
     tech: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Prisma', 'Better Auth', 'Docker'],
     repo: 'https://github.com/imeduuu/cabanias',
     visual: 'cabins',
-  },
-  {
-    id: 'dae',
-    name: 'Gestor de Pedidos Tecnológicos',
-    kind: 'Aplicación de escritorio · Gestión de pedidos',
-    status: 'Proyecto académico',
-    statusType: 'neutral',
-    summary:
-      'Sistema de escritorio para gestionar pedidos de productos tecnológicos, con usuarios, roles y estados de entrega.',
-    description:
-      'Aplicación de escritorio con interfaz en PyQt6 que organiza un catálogo de productos por categoría y permite registrar y administrar pedidos. Distingue tres roles (administrador, gerente y cliente) y sigue cada pedido por sus estados: pendiente, confirmado, enviado, entregado o cancelado.',
-    // TODO: indicar si fue un trabajo en equipo y, en ese caso, cuál fue exactamente tu parte.
-    contribution:
-      'Organizado con Clean Architecture: la interfaz, los servicios de negocio (autenticación, usuarios y pedidos) y el acceso a datos están en capas separadas, coordinadas por un mediador que inyecta las dependencias. La persistencia en SQLite se encapsula con el patrón Repositorio, y los registros nuevos se crean siempre como cliente por seguridad.',
-    tech: ['Python', 'PyQt6', 'SQLite', 'Clean Architecture', 'Patrón Repositorio'],
-    repo: 'https://github.com/imeduuu/DAE2026',
-    visual: 'dae',
   },
 ];

@@ -27,6 +27,9 @@ Sitio personal con mis proyectos de desarrollo de software.
 │   │   ├── projects.js     # Proyectos (con demo, highlights, featured, image)
 │   │   └── stack.js        # Tecnologías agrupadas
 │   └── styles.css          # Estilos, ordenados por sección
+├── scripts/
+│   ├── assets/             # Fuente original de la captura de Cancha
+│   └── generate-assets.mjs # Genera la captura WebP y la imagen Open Graph
 ├── eslint.config.js
 └── vite.config.js
 ```
@@ -45,7 +48,11 @@ npm run build     # versión de producción en dist/
 npm run preview   # sirve dist/ localmente
 npm run lint      # ESLint
 npm run format    # Prettier
+npm run generate:assets # regenera las imágenes optimizadas del sitio
 ```
+
+La captura de Cancha se mantiene en `scripts/assets/cancha.png`; el comando genera
+`public/projects/cancha.webp` y `public/og-image.png`.
 
 ## Despliegue
 

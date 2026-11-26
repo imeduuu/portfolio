@@ -341,6 +341,7 @@ h1 span {
 .hero-index {
   grid-column: 1 / -1;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   border-top: 1px solid var(--line);
@@ -351,8 +352,21 @@ h1 span {
   letter-spacing: 1px;
 }
 
-.hero-index span:first-child {
+.hero-index > span:first-child {
   color: var(--cyan);
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.hero-index-meta {
+  display: grid;
+  gap: 5px;
+  max-width: 75%;
+  text-align: right;
+  color: #aab6c9;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 
 /* --------------------------------------------------------------------------
@@ -366,7 +380,7 @@ h1 span {
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   align-items: start;
 }
@@ -405,7 +419,8 @@ h1 span {
 }
 
 .project-card.featured .visual {
-  height: 320px;
+  height: auto;
+  aspect-ratio: 1440 / 1000;
 }
 
 .project-card.featured h3 {
@@ -428,8 +443,8 @@ h1 span {
 
 .visual-image {
   display: block;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
 }
 
 .visual-note {
@@ -830,109 +845,6 @@ h1 span {
   color: #687b68;
 }
 
-/* 7.3 Gestor de pedidos */
-.visual-dae {
-  background: #e9edf4;
-  color: #29354b;
-  display: flex;
-  padding: 0;
-}
-
-.dae-sidebar {
-  width: 48px;
-  background: #25334c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 14px 0;
-}
-
-.dae-mark {
-  font-size: 11px;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.dae-mark span {
-  color: #7ce0ce;
-}
-
-.dae-sidebar i {
-  width: 13px;
-  height: 13px;
-  border: 1px solid #8292aa;
-  border-radius: 3px;
-}
-
-.dae-main {
-  padding: 16px;
-  flex: 1;
-}
-
-.dae-head {
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-}
-
-.dae-head span {
-  font-size: 7px;
-  color: #738198;
-}
-
-.dae-stats {
-  display: flex;
-  gap: 8px;
-  margin: 16px 0;
-}
-
-.dae-stats div {
-  background: #fff;
-  border: 1px solid #dce2ec;
-  border-radius: 4px;
-  padding: 8px 10px;
-  flex: 1;
-}
-
-.dae-stats small {
-  display: block;
-  font: 6px var(--mono);
-  color: #8190a6;
-}
-
-.dae-stats b {
-  display: block;
-  font-size: 17px;
-  margin-top: 4px;
-}
-
-.dae-table {
-  background: #fff;
-  border: 1px solid #dce2ec;
-  border-radius: 4px;
-  padding: 9px;
-}
-
-.dae-table > b {
-  font-size: 8px;
-}
-
-.dae-table div {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-top: 1px solid #edf0f5;
-  margin-top: 5px;
-  font-size: 7px;
-}
-
-.dae-table em {
-  font-style: normal;
-  color: #287a69;
-}
-
 /* --------------------------------------------------------------------------
    8. Sobre mí
    -------------------------------------------------------------------------- */
@@ -1175,7 +1087,8 @@ footer .brand {
 
   .visual,
   .project-card.featured .visual {
-    height: 220px;
+    height: auto;
+    aspect-ratio: 1440 / 1000;
   }
 
   .project-card.featured h3 {
@@ -1223,10 +1136,9 @@ footer .brand {
     gap: 14px 18px;
   }
 
-  .hero-index span:last-child {
-    max-width: 210px;
-    text-align: right;
-    line-height: 1.6;
+  .hero-index-meta {
+    max-width: calc(100% - 64px);
+    text-align: left;
   }
 
   .project-main,
@@ -1264,8 +1176,7 @@ footer .brand {
     width: 100%;
   }
 
-  .visual,
-  .project-card.featured .visual {
+  .visual {
     height: 205px;
   }
 

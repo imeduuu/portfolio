@@ -2,10 +2,6 @@ import { ArrowDown, ArrowUpRight, Code2, Download } from 'lucide-react';
 import { profile, sectionIndex } from '../data/profile.js';
 
 export default function Hero() {
-  const tagline = ['Chile', `${profile.career} · ${profile.institution}`, profile.lookingFor]
-    .filter(Boolean)
-    .join(' · ');
-
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-title">
       <div className="hero-copy">
@@ -44,7 +40,12 @@ export default function Hero() {
       </div>
       <div className="hero-index">
         <span aria-hidden="true">{sectionIndex('inicio')}</span>
-        <span>{tagline.toUpperCase()}</span>
+        <div className="hero-index-meta">
+          <span>
+            Chile · {profile.career} · {profile.institution}
+          </span>
+          <span>{profile.lookingFor}</span>
+        </div>
       </div>
     </section>
   );

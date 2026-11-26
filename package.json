@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "generate:assets": "node scripts/generate-assets.mjs",
     "format:check": "prettier --check ."
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.14.0",
     "prettier": "^3.10.1",
+    "sharp": "^0.35.5",
     "vite": "^6.4.6"
   },
   "engines": {
