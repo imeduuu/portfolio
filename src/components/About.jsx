@@ -15,9 +15,9 @@ export default function About() {
       </div>
       <div className="about-right">
         <p className="about-intro">
-          Llevo los proyectos de punta a punta: desde el modelo de dominio y la API hasta la
-          interfaz, las pruebas y el despliegue, para que lo que construyo funcione en producción y
-          no solo en local.
+          He desarrollado experiencia práctica llevando proyectos de punta a punta: desde el
+          modelo de dominio y la API hasta la interfaz, las pruebas y el despliegue de aplicaciones
+          en producción.
         </p>
         <p>
           Separo el código en capas para que las reglas de negocio no dependan del framework ni de
